@@ -10,8 +10,12 @@ export const pokemonServices = {
         const data = {
             id: idPokemon,
         }
-        return axios.post(pokeApi + '/v1/counter/inc', data)
+        return axios.get(pokeApi + '/v1/counter/inc', data)
     },
+
+    getPokemonDataFromUrl(url) {
+        return axios.get(url);
+    }
     
 }
 
