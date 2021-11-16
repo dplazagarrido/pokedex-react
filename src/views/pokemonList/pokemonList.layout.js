@@ -15,10 +15,10 @@ const pokemonListLayout = (props) => {
   return (
     <div style={{ width: '60%' }}>
       <div>
-        <ImageList sx={{ width: "100%", height: "70%" }}>
+        <ImageList sx={styles.imgList}>
           <ImageListItem key="Subheader" cols={2}>
-            <ListSubheader component="div" style={{ backgroundColor: '#ED462F', siz: '7' }}>Pokedex</ListSubheader>
-            <Stack style={{marginTop: '20px'}} spacing={4}>
+            <ListSubheader component="div" style={styles.listSubheader}>Pokedex</ListSubheader>
+            <Stack style={styles.stack} spacing={4}>
               <Autocomplete
                 freeSolo
                 id="free-solo-2-demo"
@@ -29,7 +29,6 @@ const pokemonListLayout = (props) => {
                 }}
                 renderInput={(params) => (
                   <TextField
-                    style={{border: 'red'}}
                     {...params}
                     label="Buscar pokémon"
                     InputProps={{
@@ -68,6 +67,27 @@ const pokemonListLayout = (props) => {
       </div>
     </div>
   );
+};
+
+const styles = {
+  imgList: {
+    width: "100%",
+    height: "70%",
+  },
+  stack: {
+    marginTop: '20px',
+  },
+  listSubheader: {
+    backgroundColor: '#ED462F',
+  },
+  divTable: {
+    alignItems: 'center',
+  },
+  buttonEnviar: {
+    marginTop: '20px',
+    marginBottom: '20px',
+    alignItems: 'center',
+  }
 };
 
 export default pokemonListLayout;
