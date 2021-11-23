@@ -45,7 +45,7 @@ const pokemonListLayout = (props) => {
             <ImageListItem key={item.img}>
               <img
                 src={item.img}
-                srcSet={`${item.img}&dpr=2 2x`}
+                srcSet={`${item.img}`}
                 alt={item.name}
                 loading="lazy"
               />
